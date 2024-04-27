@@ -1,10 +1,6 @@
 # website
-Craft233's official website
-
-
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Craft233's official website  
+Made with Nuxt 3 and UI Thing
 
 ## Setup
 
