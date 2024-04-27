@@ -1,0 +1,8 @@
+.view {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+body{
+    background-color: fcfeff;
+}
