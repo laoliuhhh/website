@@ -127,7 +127,7 @@
                                 </NuxtLink>
                             </li>
                             <li>
-                                <NuxtLink class="font-semibold hover:text-primary" target="_blank" to="#">苦力怕论坛
+                                <NuxtLink class="font-semibold hover:text-primary" target="_blank" to="https://klpbbs.com/thread-135065-1-1.html">苦力怕论坛
                                     <Icon name="lucide:external-link" class="h-4 w-4"/>
                                 </NuxtLink>
                             </li>
