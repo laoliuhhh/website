@@ -125,4 +125,12 @@ const features1 = [
       description: `当插件或模组支持，我们会追随最新的Minecraft版本`,
     },
   ];
+
+  // 页面标题
+  const runtimeConfig = useRuntimeConfig()
+  useHead({
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - 网站名称` : 'Craft233 | 主页';
+  }
+  })
 </script>
