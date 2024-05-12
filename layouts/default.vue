@@ -14,7 +14,7 @@
                         <UiNavigationMenuList class="gap-2">
                             <UiNavigationMenuItem>
                                 <UiNavigationMenuLink as-child>
-                                    <UiButton to="#" variant="ghost" size="sm">主页</UiButton>
+                                    <UiButton to="/" variant="ghost" size="sm">主页</UiButton>
                                 </UiNavigationMenuLink>
                             </UiNavigationMenuItem>
                             <UiNavigationMenuItem>
@@ -27,7 +27,12 @@
                             </UiNavigationMenuItem>
                             <UiNavigationMenuItem>
                                 <UiNavigationMenuLink as-child>
-                                    <UiButton to="#" variant="ghost" size="sm">团队</UiButton>
+                                    <UiButton to="team" variant="ghost" size="sm">团队</UiButton>
+                                </UiNavigationMenuLink>
+                            </UiNavigationMenuItem>
+                            <UiNavigationMenuItem>
+                                <UiNavigationMenuLink as-child>
+                                    <UiButton to="archive" variant="ghost" size="sm">存档</UiButton>
                                 </UiNavigationMenuLink>
                             </UiNavigationMenuItem>
                         </UiNavigationMenuList>
@@ -47,11 +52,14 @@
 
                                     <UiScrollArea class="h-full p-5">
                                         <div class="flex flex-col gap-2">
-                                            <UiButton variant="ghost" class="justify-start text-base" to="#">主页
+                                            <UiButton variant="ghost" class="justify-start text-base" to="/">主页
                                             </UiButton>
-                                            <UiButton variant="ghost" class="justify-start text-base" to="#">文档
+                                            <a href="https://docs.craft233.top" target="_blank"><UiButton variant="ghost" class="justify-start text-base">文档
+                                                <Icon name="lucide:external-link" class="h-4 w-4"/>
+                                            </UiButton></a>
+                                            <UiButton variant="ghost" class="justify-start text-base" to="team">团队
                                             </UiButton>
-                                            <UiButton variant="ghost" class="justify-start text-base" to="#">团队
+                                            <UiButton variant="ghost" class="justify-start text-base" to="archive">存档
                                             </UiButton>
                                         </div>
                                     </UiScrollArea>
@@ -63,6 +71,7 @@
             </UiContainer>
         </header>
         <slot />
+        <!------------------------ 下面是脚页 ------------------------------>
         <UiContainer as="footer" class="py-16 ">
             <section class="grid grid-cols-2 gap-8 lg:grid-cols-6">
                 <div class="col-span-full pb-10 lg:col-span-2">
@@ -151,7 +160,9 @@
 
             <section class="mt-12 flex flex-col justify-between gap-5 border-t pt-8 lg:mt-16 lg:flex-row">
                 <p class="text-muted-foreground">
-                    &copy; 2023-{{ new Date().getFullYear() }} Craft233. All rights reserved.
+                    &copy; 2023-{{ new Date().getFullYear() }} Craft233. All rights reserved.<br>
+                    <a href="https://icp.gov.moe/?keyword=20232336" target="_blank">萌ICP备20232336号</a>&nbsp
+                    <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2024074700号-1</a>
                 </p>
                 <div class="flex items-center gap-2">
                     <Icon name="lucide:github" class="h-7 w-7" />
