@@ -13,7 +13,7 @@
                         <h2 class="mt-8 flex flex-col text-2xl text-muted-foreground">由热爱驱动，致力于长久与安全的Minecraft服务器</h2>
                         <div
                             class="grid mt-8 md:flex w-full shrink-0 flex-col-reverse gap-3 md:mt-12 lg:w-auto lg:flex-row">
-                            <UiButton size="lg" class="w-full shrink-0 whitespace-nowrap md:w-auto">加入</UiButton>
+                            <UiButton size="lg" class="w-full shrink-0 whitespace-nowrap md:w-auto" to="join">加入</UiButton>
                             <a href="https://docs.craft233.top" target="_blank">
                                 <UiButton size="lg" class="w-full lg:w-auto" variant="outline">文档
                                     <Icon name="lucide:external-link" class="h-4 w-4"/>
