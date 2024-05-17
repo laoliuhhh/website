@@ -1,30 +1,33 @@
 <template>
-    <UiContainer class="py-16 text-center lg:py-24">
-        <slot name="title">
-            <h2 class="mb-4 mt-2 text-4xl font-bold lg:mb-6 lg:mt-3 lg:text-5xl">{{ obj.title }}</h2>
-        </slot>
-        <slot name="description">
-            <div v-html="obj.description"></div>
-        </slot>
-    </UiContainer>
-    <UiContainer>
+    <NuxtLayout>
+        <UiContainer class="py-16 text-center lg:py-24">
+            <slot name="title">
+                <h2 class="mb-4 mt-2 text-4xl font-bold lg:mb-6 lg:mt-3 lg:text-5xl">{{ obj.title }}</h2>
+            </slot>
+            <slot name="description">
+                <div v-html="obj.description"></div>
+            </slot>
+        </UiContainer>
+        <UiContainer>
 
-        <template v-for="(s, i) in step" :key="i">
-            <section class="mt-12 grid grid-cols-1 items-center gap-10 lg:mt-24 lg:h-[280px] lg:grid-cols-2 lg:gap-20">
-                <div :class="[i % 2 == 0 ? 'lg:order-none' : 'lg:order-1']">
-                    <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                        <Icon v-bind:name="s.icon" class="h-5 w-5 text-primary" />
+            <template v-for="(s, i) in step" :key="i">
+                <section
+                    class="mt-12 grid grid-cols-1 items-center gap-10 lg:mt-24 lg:h-[280px] lg:grid-cols-2 lg:gap-20">
+                    <div :class="[i % 2 == 0 ? 'lg:order-none' : 'lg:order-1']">
+                        <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                            <Icon v-bind:name="s.icon" class="h-5 w-5 text-primary" />
+                        </div>
+                        <h3 class="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl" v-html="s.title" />
+                        <p class="text-muted-foreground lg:text-lg" v-html="s.description" />
+
                     </div>
-                    <h3 class="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl" v-html="s.title" />
-                    <p class="text-muted-foreground lg:text-lg" v-html="s.description" />
-
-                </div>
-                <!-- eslint-disable-next-line vue/html-self-closing -->
-                <img :src="s.imageUrl" :alt="s.title"
-                    class="h-[180px] w-full rounded-lg object-cover shadow-sm lg:h-[320px]" />
-            </section>
-        </template>
-    </UiContainer>
+                    <!-- eslint-disable-next-line vue/html-self-closing -->
+                    <img :src="s.imageUrl" :alt="s.title"
+                        class="h-[180px] w-full rounded-lg object-cover shadow-sm lg:h-[320px]" />
+                </section>
+            </template>
+        </UiContainer>
+    </NuxtLayout>
 </template>
 
 <script lang="ts" setup>
