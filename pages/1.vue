@@ -1,56 +1,68 @@
 <template>
-  <UiContainer class="py-16 lg:py-24">
-    <h2 class="mb-4 mt-3 text-center text-3xl font-semibold lg:mb-5 lg:text-4xl">
-      我们的特色
-    </h2>
-    <!-- <p class="mx-auto max-w-[760px] text-center text-lg text-muted-foreground lg:text-xl">
-      Powerful, self-serve product and growth analytics to help you convert, engage, and retain more
-      users. Trusted by over 4,000 startups.
-    </p> -->
+  <UiContainer>
 
-    <div
-      class="grid grid-cols-1 gap-y-10 py-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 lg:gap-y-16 lg:py-16"
-    >
-      <template v-for="(f1, i1) in features1" :key="i1">
-        <div class="group flex flex-col items-center justify-center">
-          <div class="flex h-12 w-12 items-center justify-center rounded-md border">
-            <Icon
-              :name="f1.icon"
-              class="h-5 w-5 transition-colors group-hover:text-primary lg:h-6 lg:w-6"
-            />
+    <template v-for="(s, i) in step" :key="i">
+      <section
+        class="mt-12 grid grid-cols-1 items-center gap-10 lg:mt-24 lg:h-[280px] lg:grid-cols-2 lg:gap-20"
+      >
+        <div :class="[i % 2 == 0 ? 'lg:order-none' : 'lg:order-1']">
+          <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+            <Icon v-bind:name="s.icon" class="h-5 w-5 text-primary" />
           </div>
-          <h3
-            class="mt-4 text-balance text-center text-lg font-semibold lg:mt-5 lg:text-xl"
-            v-html="f1.title"
-          />
-          <p
-            class="mt-1 max-w-[400px] text-balance text-center text-muted-foreground lg:mt-2"
-            v-html="f1.description"
-          />
+          <h3 class="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl" v-html="s.title" />
+          <p class="text-muted-foreground lg:text-lg" v-html="s.description" />
+
         </div>
-      </template>
-    </div>
+        <!-- eslint-disable-next-line vue/html-self-closing -->
+        <img
+          :src="s.imageUrl"
+          :alt="s.title"
+          class="h-[180px] w-full rounded-lg object-cover shadow-sm lg:h-[320px]"
+        />
+      </section>
+    </template>
   </UiContainer>
 </template>
 
 <script lang="ts" setup>
-  const features1 = [
+  const step = [
     {
-      icon: "lucide:cable",
-      title: "多版本兼任",
+      title: "Share team inboxes",
+      icon: "heroicons:chat-bubble-left-right",
       description:
-        "支持Java版1.13及之后的版本以及基岩版的最新正式版",
+        "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      points: [
+        { text: "Leverage automation to move fast" },
+        { text: "Always give customers a human to chat to" },
+        { text: "Automate customer support and close leads faster" },
+      ],
     },
     {
-      icon: "lucide:shield-check",
-      title: "数据安全",
+      title: "Deliver instant answers",
+      icon: "heroicons:bolt",
       description:
-        "每日凌晨自动备份数据，保证数据安全",
+        "An all-in-one customer service platform that helps you balance everything your customers need to be happy.",
+      imageUrl:
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      points: [
+        { text: "Keep your customers in the loop with live chat" },
+        { text: "Embed help articles right on your website" },
+        { text: "Customers never have to leave the page to find an answer" },
+      ],
     },
     {
-      icon: "lucide:circle-arrow-up",
-      title: "版本新",
-      description: `当插件或模组支持，我们会追随最新的Minecraft版本`,
+      title: "Manage your team with reports",
+      icon: "heroicons:cursor-arrow-rays",
+      description: `Measure what matters with  easy-to-use reports. You can filter, export, and drill down on the data in a couple clicks.`,
+      imageUrl:
+        "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      points: [
+        { text: "Filter, export, and drilldown on the data quickly" },
+        { text: "Save, schedule, and automate reports to your inbox" },
+        { text: "Connect the tools you already use with 100+ integrations" },
+      ],
     },
   ];
 </script>
