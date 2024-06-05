@@ -80,7 +80,7 @@ const obj = reactive({
 })
 
 onMounted(async () => {
-    // var asd = await getServerState()
+    var asd = await getServerState()
     document.getElementById("desc").innerHTML = asd
     if (document.getElementById("desc").innerHTML !== "") {
         var skelet1 = document.getElementById("skelet1")
