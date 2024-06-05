@@ -6,3 +6,7 @@
 body{
     background-color: fcfeff;
 }
+.w-max-900{
+    width: 85vw;
+    max-width: 900px;
+}

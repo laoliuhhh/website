@@ -7,9 +7,9 @@
             <slot name="description">
                 <div class="flex w-full justify-center">
                     <div class="space-y-2">
-                        <UiSkeleton class="h-4 w-[900px]" id="skelet1" />
+                        <UiSkeleton class="h-4 w-max-900" id="skelet1" />
                         <span id="desc"></span>
-                        <UiSkeleton class="h-4 w-[900px]" id="skelet2" />
+                        <UiSkeleton class="h-4 w-max-900" id="skelet2" />
                     </div>
                 </div>
 
@@ -38,6 +38,7 @@
 </template>
 
 <script lang="ts" setup>
+import '~/assets/css/global.css'
 import axios from 'axios';
 import { reactive } from 'vue';
 import Description from '~/components/Ui/Alert/Description.vue';
@@ -79,7 +80,7 @@ const obj = reactive({
 })
 
 onMounted(async () => {
-    var asd = await getServerState()
+    // var asd = await getServerState()
     document.getElementById("desc").innerHTML = asd
     if (document.getElementById("desc").innerHTML !== "") {
         var skelet1 = document.getElementById("skelet1")
