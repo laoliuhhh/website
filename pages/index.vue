@@ -113,6 +113,36 @@ const features1 = [
     title: "版本新",
     description: `当插件或模组支持，我们会追随最新的Minecraft版本`,
   },
+  {
+    icon: "lucide:git-pull-request-arrow",
+    title: "基于git的修改申请",
+    description: `在我们的GitCode仓库中，通过pull request合并您对服务端的修改`,
+  },
+  {
+    icon: "lucide:cat",
+    title: "基岩版头颅显示",
+    description: `对基岩版物品栏内完整的插件头颅物品显示，背包不再算是Steve头颅`,
+  },
+  {
+    icon: "lucide:cctv",
+    title: "服务端replay",
+    description: `服务端层支持replay，记录建造过程or获取证据。我们可以提供7天内的replay文件`,
+  },
+  {
+    icon: "lucide:glasses",
+    title: "VR支持",
+    description: `服务端扩展，支持ViveCraft特性`,
+  },
+  {
+    icon: "lucide:circle-arrow-up",
+    title: "Voice Chat",
+    description: `通过Simple Voice Chat模组，实现游戏里的语音聊天`,
+  },
+  {
+    icon: "lucide:circle-arrow-up",
+    title: "皮肤自定义",
+    description: `自建皮肤站，通过/bskin设置自定义皮肤`,
+  }
 ];
 
 // 页面标题
