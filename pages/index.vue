@@ -25,14 +25,14 @@
       </UiContainer>
       <UiContainer>
         <template v-for="(f, i) in features" :key="i">
-          <section class="mt-12 grid grid-cols-1 items-center gap-10 lg:mt-24 lg:h-[520px] lg:grid-cols-2 lg:gap-20">
+          <section class="mt-12 grid grid-cols-1 items-center gap-10 lg:mt-20 lg:h-[450px] lg:grid-cols-2 lg:gap-20">
             <div :class="[i % 2 == 0 ? 'lg:order-none' : 'lg:order-1']">
               <h3 class="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl" v-html="f.title" />
               <p class="text-muted-foreground lg:text-lg" v-html="f.description" />
             </div>
             <!-- eslint-disable-next-line vue/html-self-closing -->
             <img :src="f.imageUrl" :alt="f.title"
-              class="h-[300px] w-full rounded-lg object-cover shadow-sm lg:h-[350px]" />
+              class="h-[250px] w-full rounded-lg object-cover shadow-sm lg:h-[330px]" />
           </section>
         </template>
       </UiContainer>
