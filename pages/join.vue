@@ -5,7 +5,14 @@
                 <h2 class="mb-4 mt-2 text-4xl font-bold lg:mb-6 lg:mt-3 lg:text-5xl">{{ obj.title }}</h2>
             </slot>
             <slot name="description">
-                <div v-html="obj.description"></div>
+                <div class="flex w-full justify-center">
+                    <div class="space-y-2">
+                        <UiSkeleton class="h-4 w-[900px]" id="skelet1" />
+                        <span id="desc"></span>
+                        <UiSkeleton class="h-4 w-[900px]" id="skelet2" />
+                    </div>
+                </div>
+
             </slot>
         </UiContainer>
         <UiContainer>
@@ -33,48 +40,55 @@
 <script lang="ts" setup>
 import axios from 'axios';
 import { reactive } from 'vue';
+import Description from '~/components/Ui/Alert/Description.vue';
 
 // 获取除bugcraft的玩家数
-const infoVelocity = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
-const infoBugcraft = await axios.get('https://list.mczfw.cn/api/mc.craft233.top:10004');
-const playersNumVelocity = infoVelocity.data.p;
-const playersNumBugcraft = infoBugcraft.data.p;
-const playersVelocity: number = playersNumVelocity as number;
-const playersBugcraft: number = playersNumBugcraft as number;
-var players = playersVelocity - playersBugcraft; //所有子服的玩家数
+async function getServerState(): Promise<string> {
+    const infoVelocity = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
+    // const infoBugcraft = await axios.get('https://list.mczfw.cn/api/mc.craft233.top:10004');
+    const playersNumVelocity = infoVelocity.data.p;
+    // const playersNumBugcraft = infoBugcraft.data.p;
+    const playersVelocity: number = playersNumVelocity as number;
+    // const playersBugcraft: number = playersNumBugcraft as number;
+    var players = playersVelocity; //所有子服的玩家数
 
-const info = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
-var serverMotd = info.data.motd; // 获取motd
-if (serverMotd == "（此服务器离线或者服务器不存在）") {// 使用motd判断在线状态
-    var serverStatus = '<p class="text-lg text-muted-foreground lg:text-xl" style="color:red;">离线&nbsp</p>';
-    var online = 'false';
-} else {
-    var serverStatus = '<p class="text-lg text-muted-foreground lg:text-xl text-primary">在线</p>';
-    var online = 'true';
+    const info = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
+    var serverMotd = info.data.motd; // 获取motd
+    if (serverMotd == "（此服务器离线或者服务器不存在）") {// 使用motd判断在线状态
+        var serverStatus = '<p class="text-lg text-muted-foreground lg:text-xl" style="color:red;">离线&nbsp</p>';
+        var online = 'false';
+    } else {
+        var serverStatus = '<p class="text-lg text-muted-foreground lg:text-xl text-primary">在线</p>';
+        var online = 'true';
+    }
+    //获取各子服版本
+    const infoCube = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10003');
+    const infoOases = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10002');
+    const infoLogin = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10001');
+
+    //汇集输出结果，用于填充于p
+    if (online == 'true') {
+        var sStatus = '<p class="text-lg text-muted-foreground lg:text-xl">当前服务器状态：' + serverStatus + '<p class=" text-lg text-muted-foreground lg:text-xl">' + "在线人数：" + players + "&nbsp|&nbsp" + "服务端版本：" + "登陆服：" + infoLogin.data.version + "&nbsp|&nbspOases：" + infoOases.data.version + "&nbsp|&nbspCube：Fabric&nbsp" + infoCube.data.version + "</p>";
+    } else {
+        var sStatus = '<p class=" text-lg text-muted-foreground lg:text-xl">当前服务器状态：' + serverStatus;
+    }
+    return sStatus
 }
-//获取各子服版本
-const infoCube = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10003');
-const infoOases = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10002');
-const infoLogin = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10001');
-
-//汇集输出结果，用于填充于p
-if (online == 'true') {
-    var sStatus = '<p class="text-lg text-muted-foreground lg:text-xl">当前服务器状态：' + serverStatus + '<p class=" text-lg text-muted-foreground lg:text-xl">' + "在线人数：" + players + "&nbsp|&nbsp" + "服务端版本：" + "登陆服：" + infoLogin.data.version + "&nbsp|&nbspOases：" + infoOases.data.version + "&nbsp|&nbspCube：Fabric&nbsp" + infoCube.data.version + "</p>";
-} else {
-    var sStatus = '<p class=" text-lg text-muted-foreground lg:text-xl">当前服务器状态：' + serverStatus;
-}
-
-
-
-// reactive 函数用于响应式对象
 const obj = reactive({
     title: '加入服务器',
-    description: sStatus
 })
 
-function sleep(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+onMounted(async () => {
+    var asd = await getServerState()
+    document.getElementById("desc").innerHTML = asd
+    if (document.getElementById("desc").innerHTML !== "") {
+        var skelet1 = document.getElementById("skelet1")
+        skelet1?.parentNode?.removeChild(skelet1)
+        var skelet2 = document.getElementById("skelet2")
+        skelet2?.parentNode?.removeChild(skelet2)
+    }
+
+})
 
 const step = [
     {

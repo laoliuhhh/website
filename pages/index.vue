@@ -74,7 +74,7 @@ if (players > 2) {
   var playerInfo = "";
 }
 
-onMounted(() => {
+onMounted(async () => {
   document.getElementById('playerdata').textContent = playerInfo
 })
 
