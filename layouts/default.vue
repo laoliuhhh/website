@@ -113,6 +113,10 @@
                                     to="https://space.bilibili.com/3546655496342120">BiliBili
                                     <Icon name="lucide:external-link" class="h-4 w-4"/></NuxtLink>
                             </li>
+                            <li>
+                                <NuxtLink class="font-semibold hover:text-primary"
+                                    to="/guidelines">行为准则</NuxtLink>
+                            </li>
                         </ul>
                     </div>
                 </template>
