@@ -134,12 +134,12 @@ const features1 = [
     description: `服务端扩展，支持ViveCraft特性`,
   },
   {
-    icon: "lucide:circle-arrow-up",
+    icon: "lucide:mic",
     title: "Voice Chat",
     description: `通过Simple Voice Chat模组，实现游戏里的语音聊天`,
   },
   {
-    icon: "lucide:circle-arrow-up",
+    icon: "lucide:shirt",
     title: "皮肤自定义",
     description: `自建皮肤站，通过/bskin设置自定义皮肤`,
   }
