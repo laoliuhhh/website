@@ -10,6 +10,7 @@
                         <UiSkeleton class="h-4 w-max-900" id="skelet1" />
                         <span id="desc"></span>
                         <UiSkeleton class="h-4 w-max-900" id="skelet2" />
+                        <UiSkeleton class="h-4 w-max-900" id="skelet3" />
                     </div>
                 </div>
 
@@ -87,6 +88,8 @@ onMounted(async () => {
         skelet1?.parentNode?.removeChild(skelet1)
         var skelet2 = document.getElementById("skelet2")
         skelet2?.parentNode?.removeChild(skelet2)
+        var skelet3 = document.getElementById("skelet3")
+        skelet3?.parentNode?.removeChild(skelet3)
     }
 
 })
