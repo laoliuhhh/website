@@ -96,12 +96,12 @@ onMounted(async () => {
 
 const step = [
     {
-        title: "Share team inboxes",
-        icon: "heroicons:chat-bubble-left-right",
+        title: "进入游戏菜单",
+        icon: "tabler:circle-number-1",
         description:
-            "Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.",
+            "",
         imageUrl:
-            "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/assets/join/1.png",
         points: [
             { text: "Leverage automation to move fast" },
             { text: "Always give customers a human to chat to" },
@@ -109,12 +109,12 @@ const step = [
         ],
     },
     {
-        title: "Deliver instant answers",
-        icon: "heroicons:bolt",
+        title: "点击添加服务器",
+        icon: "tabler:circle-number-2",
         description:
-            "An all-in-one customer service platform that helps you balance everything your customers need to be happy.",
+            "",
         imageUrl:
-            "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/assets/join/2.png",
         points: [
             { text: "Keep your customers in the loop with live chat" },
             { text: "Embed help articles right on your website" },
@@ -122,11 +122,11 @@ const step = [
         ],
     },
     {
-        title: "Manage your team with reports",
-        icon: "heroicons:cursor-arrow-rays",
-        description: `Measure what matters with  easy-to-use reports. You can filter, export, and drill down on the data in a couple clicks.`,
+        title: "填入信息并保存",
+        icon: "tabler:circle-number-3",
+        description: ``,
         imageUrl:
-            "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/assets/join/3.png",
         points: [
             { text: "Filter, export, and drilldown on the data quickly" },
             { text: "Save, schedule, and automate reports to your inbox" },
