@@ -24,4 +24,4 @@ logs
 !.env.example
 
 # draft file
-pages/1.vue
+pages/test.vue
