@@ -4,7 +4,7 @@
         <header class="z-20 bg-background/80 backdrop-blur">
             <UiContainer class="flex h-16 items-center justify-between lg:h-20">
                 <div class="flex items-center gap-10">
-                    <NuxtLink to="#" class="flex items-center gap-3">
+                    <NuxtLink to="/" class="flex items-center gap-3">
                         <!-- eslint-disable-next-line vue/html-self-closing -->
                         <img src="https://resource.neokoni.moe/craft233/img/craft233_logo.svg" fit="contain"
                             alt="Company Logo" title="Company Logo" class="h-6 object-contain lg:h-8" />
