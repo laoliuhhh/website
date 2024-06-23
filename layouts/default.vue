@@ -35,6 +35,11 @@
                                     <UiButton to="archive" variant="ghost" size="sm">存档</UiButton>
                                 </UiNavigationMenuLink>
                             </UiNavigationMenuItem>
+                            <UiNavigationMenuItem>
+                                <UiNavigationMenuLink as-child>
+                                    <UiButton to="rules" variant="ghost" size="sm">规则</UiButton>
+                                </UiNavigationMenuLink>
+                            </UiNavigationMenuItem>
                         </UiNavigationMenuList>
                     </UiNavigationMenu>
                 </div>
@@ -60,6 +65,8 @@
                                             <UiButton variant="ghost" class="justify-start text-base" to="team">团队
                                             </UiButton>
                                             <UiButton variant="ghost" class="justify-start text-base" to="archive">存档
+                                            </UiButton>
+                                            <UiButton variant="ghost" class="justify-start text-base" to="rules">规则
                                             </UiButton>
                                         </div>
                                     </UiScrollArea>
