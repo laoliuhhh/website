@@ -98,9 +98,9 @@ const features = [
 const features1 = [
   {
     icon: "lucide:cable",
-    title: "多版本兼任",
+    title: "版本兼任",
     description:
-      "支持Java版1.13及之后的版本以及基岩版的最新正式版",
+      "支持Java版1.20及之后的版本以及基岩版的最新正式版",
   },
   {
     icon: "lucide:shield-check",
