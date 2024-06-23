@@ -9,7 +9,7 @@
             <h3 class="text-3xl font-semibold lg:text-5xl ">
               Craft233
             </h3>
-            <h2 class="mt-8 flex flex-col text-2xl text-muted-foreground">由热爱驱动，致力于长久与安全的Minecraft服务器</h2>
+            <h2 class="mt-8 flex flex-col text-2xl text-muted-foreground">简单纯粹，在未知中探索。在尝试中找到尽可能优的生存体验。与玩家一起，携手出发。</h2>
             <div class="grid mt-8 md:flex w-full shrink-0 flex-col-reverse gap-3 md:mt-12 lg:w-auto lg:flex-row">
               <UiButton size="lg" class="w-full shrink-0 whitespace-nowrap md:w-auto" to="join">加入</UiButton>
               <a href="https://docs.craft233.top" target="_blank">
@@ -92,7 +92,7 @@ const features = [
     description:
       `• Oases:由Leaves核心驱动的休闲服，提供更丰富的游玩内容，开放生电特性与相关协议支持<br>• Cube: 由Fabric核心驱动的生电服务器，提供完整的生电内容与优化的原版内容`,
     imageUrl:
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "/assets/img/index/server.png",
   }
 ];
 const features1 = [
