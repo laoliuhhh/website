@@ -87,13 +87,6 @@ const features = [
     imageUrl:
       "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-  {
-    title: "综合的发展方向",
-    description:
-      `• Oases:由Leaves核心驱动的休闲服，提供更丰富的游玩内容，开放生电特性与相关协议支持<br>• Cube: 由Fabric核心驱动的生电服务器，提供完整的生电内容与优化的原版内容`,
-    imageUrl:
-      "/assets/img/index/server.png",
-  }
 ];
 const features1 = [
   {

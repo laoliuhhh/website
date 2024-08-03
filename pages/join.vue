@@ -44,14 +44,11 @@ import axios from 'axios';
 import { reactive } from 'vue';
 import Description from '~/components/Ui/Alert/Description.vue';
 
-// 获取除bugcraft的玩家数
+// 获取玩家数
 async function getServerState(): Promise<string> {
     const infoVelocity = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
-    // const infoBugcraft = await axios.get('https://list.mczfw.cn/api/mc.craft233.top:10004');
     const playersNumVelocity = infoVelocity.data.p;
-    // const playersNumBugcraft = infoBugcraft.data.p;
     const playersVelocity: number = playersNumVelocity as number;
-    // const playersBugcraft: number = playersNumBugcraft as number;
     var players = playersVelocity; //所有子服的玩家数
 
     const info = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
@@ -64,13 +61,12 @@ async function getServerState(): Promise<string> {
         var online = 'true';
     }
     //获取各子服版本
-    const infoCube = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10003');
     const infoOases = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10002');
     const infoLogin = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top:10001');
 
     //汇集输出结果，用于填充于p
     if (online == 'true') {
-        var sStatus = '<p class="text-lg text-muted-foreground lg:text-xl">当前服务器状态：' + serverStatus + '<p class=" text-lg text-muted-foreground lg:text-xl">' + "在线人数：" + players + "&nbsp|&nbsp" + "服务端版本：" + "登陆服：" + infoLogin.data.version + "&nbsp|&nbspOases：" + infoOases.data.version + "&nbsp|&nbspCube：Fabric&nbsp" + infoCube.data.version + "</p>";
+        var sStatus = '<p class="text-lg text-muted-foreground lg:text-xl">当前服务器状态：' + serverStatus + '<p class=" text-lg text-muted-foreground lg:text-xl">' + "在线人数：" + players + "&nbsp|&nbsp" + "服务端版本：" + "登陆服：" + infoLogin.data.version + "&nbsp|&nbspOases：" + infoOases.data.version + "</p>";
     } else {
         var sStatus = '<p class=" text-lg text-muted-foreground lg:text-xl">当前服务器状态：' + serverStatus;
     }
