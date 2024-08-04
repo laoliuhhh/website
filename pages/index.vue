@@ -1,5 +1,4 @@
 <template>
-  <div>
     <NuxtLayout>
       <UiContainer class="relative flex flex-col items-center justify-center gap-y-12 py-10 lg:h-[720px] lg:flex-row">
         <img src="https://resource.neokoni.moe/craft233/img/craft233_logo.svg" alt="Server image"
@@ -59,7 +58,6 @@
         </div>
       </UiContainer>
     </NuxtLayout>
-  </div>
 </template>
 
 <script lang="ts" setup>
