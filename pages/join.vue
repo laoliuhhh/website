@@ -135,8 +135,8 @@ const step = [
 // 页面标题
 const runtimeConfig = useRuntimeConfig()
 useHead({
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - 网站名称` : 'Craft233 | 加入服务器';
-  }
+    titleTemplate: (titleChunk) => {
+        return titleChunk ? `${titleChunk} - 网站名称` : 'Craft233 | 加入服务器';
+    }
 })
 </script>

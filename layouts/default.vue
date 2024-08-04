@@ -1,5 +1,4 @@
 <template>
-
     <div>
         <header class="z-20 bg-background/80 backdrop-blur">
             <UiContainer class="flex h-16 items-center justify-between lg:h-20">
@@ -19,10 +18,12 @@
                             </UiNavigationMenuItem>
                             <UiNavigationMenuItem>
                                 <UiNavigationMenuLink as-child>
-                                    <a href="https://docs.craft233.top" target="_blank"><UiButton variant="ghost"size="sm">文档
-                                        <Icon name="lucide:external-link" class="h-4 w-4"/>
-                                    </UiButton></a>
-                                    
+                                    <a href="https://docs.craft233.top" target="_blank">
+                                        <UiButton variant="ghost" size="sm">文档
+                                            <Icon name="lucide:external-link" class="h-4 w-4" />
+                                        </UiButton>
+                                    </a>
+
                                 </UiNavigationMenuLink>
                             </UiNavigationMenuItem>
                             <UiNavigationMenuItem>
@@ -54,9 +55,11 @@
                                         <div class="flex flex-col gap-2">
                                             <UiButton variant="ghost" class="justify-start text-base" to="/">主页
                                             </UiButton>
-                                            <a href="https://docs.craft233.top" target="_blank"><UiButton variant="ghost" class="justify-start text-base">文档
-                                                <Icon name="lucide:external-link" class="h-4 w-4"/>
-                                            </UiButton></a>
+                                            <a href="https://docs.craft233.top" target="_blank">
+                                                <UiButton variant="ghost" class="justify-start text-base">文档
+                                                    <Icon name="lucide:external-link" class="h-4 w-4" />
+                                                </UiButton>
+                                            </a>
                                             <UiButton variant="ghost" class="justify-start text-base" to="archive">存档
                                             </UiButton>
                                             <UiButton variant="ghost" class="justify-start text-base" to="rules">规则
@@ -93,7 +96,7 @@
                                 <NuxtLink target="_blank" class="font-semibold hover:text-primary"
                                     to="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=QofGtNhyZdlU0kVZtr81sGxVDMzKGkkt&authKey=59dPS936wuYm%2Bg4qHFkMdo8IYTcdD6Jp8Q9kBb2Mmv8i7APEm0Ms2373ztiW97wE&noverify=0&group_code=830277457">
                                     QQ群
-                                    <Icon name="lucide:external-link" class="h-4 w-4"/>
+                                    <Icon name="lucide:external-link" class="h-4 w-4" />
                                 </NuxtLink>
                             </li>
                         </ul>
@@ -106,12 +109,14 @@
                             <li>
                                 <NuxtLink class="font-semibold hover:text-primary" target="_blank"
                                     to="https://github.com/Craft233MC">Github
-                                <Icon name="lucide:external-link" class="h-4 w-4"/></NuxtLink>
+                                    <Icon name="lucide:external-link" class="h-4 w-4" />
+                                </NuxtLink>
                             </li>
                             <li>
                                 <NuxtLink class="font-semibold hover:text-primary" target="_blank"
                                     to="https://space.bilibili.com/3546655496342120">BiliBili
-                                    <Icon name="lucide:external-link" class="h-4 w-4"/></NuxtLink>
+                                    <Icon name="lucide:external-link" class="h-4 w-4" />
+                                </NuxtLink>
                             </li>
                         </ul>
                     </div>
@@ -123,12 +128,13 @@
                             <li>
                                 <NuxtLink class="font-semibold hover:text-primary" target="_blank"
                                     to="https://www.minebbs.com/threads/1-13-x-1-20-x-craft233-2.19401/">MineBBS
-                                    <Icon name="lucide:external-link" class="h-4 w-4"/>
+                                    <Icon name="lucide:external-link" class="h-4 w-4" />
                                 </NuxtLink>
                             </li>
                             <li>
-                                <NuxtLink class="font-semibold hover:text-primary" target="_blank" to="https://klpbbs.com/thread-135065-1-1.html">苦力怕论坛
-                                    <Icon name="lucide:external-link" class="h-4 w-4"/>
+                                <NuxtLink class="font-semibold hover:text-primary" target="_blank"
+                                    to="https://klpbbs.com/thread-135065-1-1.html">苦力怕论坛
+                                    <Icon name="lucide:external-link" class="h-4 w-4" />
                                 </NuxtLink>
                             </li>
                         </ul>
@@ -141,17 +147,20 @@
                             <li>
                                 <NuxtLink class="font-semibold hover:text-primary" target="_blank"
                                     to="https://skin.craft233.top/">Craft233 Skin
-                                    <Icon name="lucide:external-link" class="h-4 w-4"/></NuxtLink>
+                                    <Icon name="lucide:external-link" class="h-4 w-4" />
+                                </NuxtLink>
                             </li>
                             <li>
                                 <NuxtLink class="font-semibold hover:text-primary" target="_blank"
                                     to="https://status.craft233.top/status/craft233">外部监测站
-                                    <Icon name="lucide:external-link" class="h-4 w-4"/></NuxtLink>
+                                    <Icon name="lucide:external-link" class="h-4 w-4" />
+                                </NuxtLink>
                             </li>
                             <li>
                                 <NuxtLink class="font-semibold hover:text-primary" target="_blank"
                                     to="https://afdian.net/a/craft233/">爱发电
-                                    <Icon name="lucide:external-link" class="h-4 w-4"/></NuxtLink>
+                                    <Icon name="lucide:external-link" class="h-4 w-4" />
+                                </NuxtLink>
                             </li>
                         </ul>
                     </div>
@@ -167,11 +176,9 @@
                 </p>
                 <div class="flex items-center gap-2">
                     <Icon name="lucide:github" class="h-7 w-7" />
-                    <Icon name="ri:bilibili-line" class="h-7 w-7"/>
+                    <Icon name="ri:bilibili-line" class="h-7 w-7" />
                 </div>
             </section>
         </UiContainer>
-
-
     </div>
 </template>

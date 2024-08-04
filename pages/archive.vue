@@ -13,23 +13,18 @@
             </slot>
             <div class="lg:py-20 py-16"></div>
             <template v-for="(h, i) in history" :key="i">
-                <section
-                    class="mt-12 grid grid-cols-1 items-center gap-10 lg:h-[280px] lg:grid-cols-2 lg:gap-20">
+                <section class="mt-12 grid grid-cols-1 items-center gap-10 lg:h-[280px] lg:grid-cols-2 lg:gap-20">
                     <div :class="[i % 2 == 0 ? 'lg:order-none' : 'lg:order-1']">
-                        <NuxtLink
-                            :to="h.downloadUrl"
-                            target="_blank">
-                        <h3 class="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl" v-html="h.title" />
+                        <NuxtLink :to="h.downloadUrl" target="_blank">
+                            <h3 class="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl" v-html="h.title" />
                         </NuxtLink>
                         <p class="text-muted-foreground lg:text-lg mb-5" v-html="h.description" />
                         <p class="text-muted-foreground lg:text-lg" v-html="h.data"></p>
                     </div>
                     <!-- eslint-disable-next-line vue/html-self-closing -->
-                    <NuxtLink
-                        :to="h.downloadUrl"
-                        class="shrink-0" target="_blank">
-                    <img :src="h.imageUrl" :alt="h.title"
-                        class="h-[180px] w-full rounded-lg object-cover shadow-sm lg:h-[320px]" />
+                    <NuxtLink :to="h.downloadUrl" class="shrink-0" target="_blank">
+                        <img :src="h.imageUrl" :alt="h.title"
+                            class="h-[180px] w-full rounded-lg object-cover shadow-sm lg:h-[320px]" />
                     </NuxtLink>
                 </section>
             </template>
@@ -64,8 +59,8 @@ const history = [
 // 页面标题
 const runtimeConfig = useRuntimeConfig()
 useHead({
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - 网站名称` : 'Craft233 | 获取存档';
-  }
+    titleTemplate: (titleChunk) => {
+        return titleChunk ? `${titleChunk} - 网站名称` : 'Craft233 | 获取存档';
+    }
 })
 </script>
