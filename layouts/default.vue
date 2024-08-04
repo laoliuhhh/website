@@ -28,12 +28,12 @@
                             </UiNavigationMenuItem>
                             <UiNavigationMenuItem>
                                 <UiNavigationMenuLink as-child>
-                                    <UiButton to="archive" variant="ghost" size="sm">存档</UiButton>
+                                    <UiButton to="/archive" variant="ghost" size="sm">存档</UiButton>
                                 </UiNavigationMenuLink>
                             </UiNavigationMenuItem>
                             <UiNavigationMenuItem>
                                 <UiNavigationMenuLink as-child>
-                                    <UiButton to="rules" variant="ghost" size="sm">规则</UiButton>
+                                    <UiButton to="/contribute" variant="ghost" size="sm">贡献</UiButton>
                                 </UiNavigationMenuLink>
                             </UiNavigationMenuItem>
                         </UiNavigationMenuList>
@@ -60,9 +60,9 @@
                                                     <Icon name="lucide:external-link" class="h-4 w-4" />
                                                 </UiButton>
                                             </a>
-                                            <UiButton variant="ghost" class="justify-start text-base" to="archive">存档
+                                            <UiButton variant="ghost" class="justify-start text-base" to="/archive">存档
                                             </UiButton>
-                                            <UiButton variant="ghost" class="justify-start text-base" to="rules">规则
+                                            <UiButton variant="ghost" class="justify-start text-base" to="/contribute">贡献
                                             </UiButton>
                                         </div>
                                     </UiScrollArea>
@@ -78,7 +78,7 @@
         <UiContainer as="footer" class="py-16 ">
             <section class="grid grid-cols-2 gap-8 lg:grid-cols-6">
                 <div class="col-span-full pb-10 lg:col-span-2">
-                    <NuxtLink to="#" class="flex items-center gap-3">
+                    <NuxtLink to="/" class="flex items-center gap-3">
                         <!-- eslint-disable-next-line vue/html-self-closing -->
                         <img src="https://resource.neokoni.moe/craft233/img/craft233_logo.svg" fit="contain"
                             alt="Company Logo" title="Company Logo" class="h-7 object-contain lg:h-10" />
