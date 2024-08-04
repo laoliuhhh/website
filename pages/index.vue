@@ -95,16 +95,17 @@
 <script lang="ts" setup>
 import axios from 'axios';
 // 在线玩家显示的数据获取部分
-const response = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
-const playersNum = response.data.p;
-const players: number = playersNum as number;
-if (players > 2) {
-  var playerInfo = players + "名";
-} else {
-  var playerInfo = "";
-}
+
 
 onMounted(async () => {
+  const response = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top');
+  const playersNum = response.data.players.online;
+  const players: number = playersNum as number;
+  if (players > 2) {
+    var playerInfo = players + "名";
+  } else {
+    var playerInfo = "";
+  }
   document.getElementById('playerdata').textContent = playerInfo
 })
 
@@ -180,56 +181,56 @@ const description = "认识一下我们的管理人员";
 const members = [
   {
     avatar: "https://q1.qlogo.cn/g?b=qq&nk=3335792980&s=640",
-        name: "Neokoni",
-        position: "服主",
-        introduce: 
-        {
-            line1: "每天都在摸鱼的鸽子",
-        },
-        contact: [
-            {   
-                icon: "lucide:github",
-                link: "https://github.com/neokoni",
-            },
-            {   
-                icon: "lucide:mail",
-                link: "mailto://me@neokoni.moe",
-            },
-        ],
-
-    },
+    name: "Neokoni",
+    position: "服主",
+    introduce:
     {
-        avatar: "https://q1.qlogo.cn/g?b=qq&nk=2117015126&s=640",
-        name: "233laoliu",
-        position: "管理员",
-        introduce: 
-        {
-            line1: "？",
-        },
-        contact: [
-            {   
-                icon: "",
-                link: "",
-            },
-        ],
-
+      line1: "每天都在摸鱼的鸽子",
     },
+    contact: [
+      {
+        icon: "lucide:github",
+        link: "https://github.com/neokoni",
+      },
+      {
+        icon: "lucide:mail",
+        link: "mailto://me@neokoni.moe",
+      },
+    ],
+
+  },
+  {
+    avatar: "https://q1.qlogo.cn/g?b=qq&nk=2117015126&s=640",
+    name: "233laoliu",
+    position: "管理员",
+    introduce:
     {
-        avatar: "https://q1.qlogo.cn/g?b=qq&nk=2712878343&s=640",
-        name: "gjyyds1",
-        position: "管理员,礼包大使",
-        introduce: 
-        {
-            line1: "我除会了eee还会eee的",
-        },
-        contact: [
-            {   
-                icon: "",
-                link: "",
-            },
-        ],
-
+      line1: "？",
     },
+    contact: [
+      {
+        icon: "",
+        link: "",
+      },
+    ],
+
+  },
+  {
+    avatar: "https://q1.qlogo.cn/g?b=qq&nk=2712878343&s=640",
+    name: "gjyyds1",
+    position: "管理员,礼包大使",
+    introduce:
+    {
+      line1: "我除会了eee还会eee的",
+    },
+    contact: [
+      {
+        icon: "",
+        link: "",
+      },
+    ],
+
+  },
 ];
 
 // 页面标题

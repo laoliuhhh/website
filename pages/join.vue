@@ -46,14 +46,14 @@ import Description from '~/components/Ui/Alert/Description.vue';
 
 // 获取玩家数
 async function getServerState(): Promise<string> {
-    const infoVelocity = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
-    const playersNumVelocity = infoVelocity.data.p;
+    const infoVelocity = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top');
+    const playersNumVelocity = infoVelocity.data.players.online;
     const playersVelocity: number = playersNumVelocity as number;
     var players = playersVelocity; //所有子服的玩家数
 
-    const info = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
-    var serverMotd = info.data.motd; // 获取motd
-    if (serverMotd == "（此服务器离线或者服务器不存在）") {// 使用motd判断在线状态
+    const info = await axios.get('https://api.mcsrvstat.us/3/mc.craft233.top');
+    var status = info.data.online; // 获取在线状态
+    if (status == "true") {// 判断在线状态
         var serverStatus = '<p class="text-lg text-muted-foreground lg:text-xl" style="color:red;">离线&nbsp</p>';
         var online = 'false';
     } else {
