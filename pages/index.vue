@@ -185,7 +185,7 @@ const members = [
     position: "服主",
     introduce:
     {
-      line1: "每天都在摸鱼的鸽子",
+      line1: "每天都在摸鱼的鸽子|老登",
     },
     contact: [
       {
@@ -203,9 +203,9 @@ const members = [
     avatar: "https://q1.qlogo.cn/g?b=qq&nk=2117015126&s=640",
     name: "233laoliu",
     position: "管理员",
-    introduce:
+    introduce: 
     {
-      line1: "这个人很神秘,没有留下任何东西",
+      line1: "发电战士(我爱发电)|中等",
     },
     contact: [
       {
@@ -221,7 +221,7 @@ const members = [
     position: "管理员,礼包大使",
     introduce:
     {
-      line1: "我除会了eee还会eee的",
+      line1: "我除会了eee还会eee的|小登",
     },
     contact: [
       {
