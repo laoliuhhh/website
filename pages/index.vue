@@ -205,12 +205,12 @@ const members = [
     position: "管理员",
     introduce:
     {
-      line1: "这个人很神秘,没有留下任何东西",
+      line1: "爱发颠",
     },
     contact: [
       {
-        icon: "",
-        link: "",
+        icon: "https://http.cat/200.jpg",
+        link: "http://wpa.qq.com/msgrd?V=1amp;Uin=2117015126amp;Site=ioshenmueMenu=yes",
       },
     ],
 
