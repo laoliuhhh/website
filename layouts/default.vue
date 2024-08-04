@@ -27,11 +27,6 @@
                             </UiNavigationMenuItem>
                             <UiNavigationMenuItem>
                                 <UiNavigationMenuLink as-child>
-                                    <UiButton to="team" variant="ghost" size="sm">团队</UiButton>
-                                </UiNavigationMenuLink>
-                            </UiNavigationMenuItem>
-                            <UiNavigationMenuItem>
-                                <UiNavigationMenuLink as-child>
                                     <UiButton to="archive" variant="ghost" size="sm">存档</UiButton>
                                 </UiNavigationMenuLink>
                             </UiNavigationMenuItem>
@@ -62,8 +57,6 @@
                                             <a href="https://docs.craft233.top" target="_blank"><UiButton variant="ghost" class="justify-start text-base">文档
                                                 <Icon name="lucide:external-link" class="h-4 w-4"/>
                                             </UiButton></a>
-                                            <UiButton variant="ghost" class="justify-start text-base" to="team">团队
-                                            </UiButton>
                                             <UiButton variant="ghost" class="justify-start text-base" to="archive">存档
                                             </UiButton>
                                             <UiButton variant="ghost" class="justify-start text-base" to="rules">规则

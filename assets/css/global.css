@@ -10,3 +10,6 @@ body{
     width: 85vw;
     max-width: 900px;
 }
+.w-max-1250{
+    max-width: 1250px;
+}

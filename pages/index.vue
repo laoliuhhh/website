@@ -57,12 +57,44 @@
           </template>
         </div>
       </UiContainer>
+      
+      <UiContainer class="">
+            <UiContainer class="py-16 text-center lg:py-24">
+                <slot name="title">
+                    <h2 class="mb-4 mt-2 text-4xl font-bold lg:mb-6 lg:mt-3 lg:text-5xl">{{ title }}</h2>
+                </slot>
+                <slot name="description">
+                    <p class="mx-auto max-w-[768px] text-lg text-muted-foreground lg:text-xl">
+                        {{ description }}
+                    </p>
+                </slot>
+            </UiContainer>
+
+
+            <section class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-12">
+                <template v-for="m in members">
+                    <div class="flex flex-col items-center w-max-1250">
+                        <UiAvatar class="mb-5 h-24 w-24 ring-1 ring-ring/20" :src="m.avatar" />
+                        <p class="text-lg font-semibold" v-html="m.name" />
+                        <p class="" v-html="m.position" />
+                        <ul class="mt-2 text-muted-foreground">
+                            <li v-for="intro in m.introduce" v-html="intro" />
+                        </ul>
+                        <div class="mt-2 flex items-center gap-3">
+                            <NuxtLink v-for="links in m.contact" :to="links.link" target="_blank">
+                                <Icon :name="links.icon" class="h-5 w-5 text-muted-foreground" />
+                            </NuxtLink>
+                        </div>
+                    </div>
+                </template>
+            </section>
+        </UiContainer>
     </NuxtLayout>
 </template>
 
 <script lang="ts" setup>
 import axios from 'axios';
-
+// 在线玩家显示的数据获取部分
 const response = await axios.get('https://list.mczfw.cn/api/mc.craft233.top');
 const playersNum = response.data.p;
 const players: number = playersNum as number;
@@ -86,6 +118,9 @@ const features = [
       "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
+
+// 特点部分
+
 const features1 = [
   {
     icon: "lucide:cable",
@@ -134,6 +169,67 @@ const features1 = [
     title: "皮肤自定义",
     description: `自建皮肤站，通过/bskin设置自定义皮肤`,
   }
+];
+
+// 团队部分
+// 上部分标题
+const title = "我们的团队";
+const description = "认识一下我们的管理人员";
+
+// 人物信息部分
+const members = [
+    {
+        avatar: "https://q1.qlogo.cn/g?b=qq&nk=3335792980&s=640",
+        name: "Neokoni",
+        position: "服主",
+        introduce: 
+        {
+            line1: "每天都在摸鱼的鸽子",
+        },
+        contact: [
+            {   
+                icon: "lucide:github",
+                link: "https://github.com/neokoni",
+            },
+            {   
+                icon: "lucide:mail",
+                link: "mailto://me@neokoni.moe",
+            },
+        ],
+
+    },
+    {
+        avatar: "https://q1.qlogo.cn/g?b=qq&nk=2117015126&s=640",
+        name: "233laoliu",
+        position: "管理员",
+        introduce: 
+        {
+            line1: "？",
+        },
+        contact: [
+            {   
+                icon: "",
+                link: "",
+            },
+        ],
+
+    },
+    {
+        avatar: "https://q1.qlogo.cn/g?b=qq&nk=2712878343&s=640",
+        name: "gjyyds1",
+        position: "管理员,礼包大使",
+        introduce: 
+        {
+            line1: "我除会了eee还会eee的",
+        },
+        contact: [
+            {   
+                icon: "",
+                link: "",
+            },
+        ],
+
+    },
 ];
 
 // 页面标题
