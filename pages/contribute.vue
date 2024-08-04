@@ -67,4 +67,11 @@ const type = [
         class: "",
     },
 ];
+
+const runtimeConfig = useRuntimeConfig()
+useHead({
+    titleTemplate: (titleChunk) => {
+        return titleChunk ? `${titleChunk} - 网站名称` : 'Craft233 | 贡献';
+    }
+})
 </script>
