@@ -185,7 +185,7 @@ const members = [
     position: "服主",
     introduce:
     {
-      line1: "每天都在摸鱼的鸽子",
+      line1: "每天都在摸鱼的鸽子(老登)",
     },
     contact: [
       {
@@ -205,7 +205,7 @@ const members = [
     position: "管理员",
     introduce:
     {
-      line1: "？",
+      line1: "这个人很神秘,没有留下任何东西",
     },
     contact: [
       {
