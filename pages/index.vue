@@ -116,7 +116,7 @@ const features = [
     description:
       `友善的玩家与管理团队解决您遇到的问题，立即加入，与其他<span id="playerdata"></span>玩家一同创建家园`,
     imageUrl:
-      "/assets/index/town.png",
+      "/assets/img/index/town.png",
   },
 ];
 
